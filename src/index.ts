@@ -1,32 +1,22 @@
 import newman from 'newman';
-import json from '../src/collection/sample-collection.json';
+import collection from '../src/collection/Booking.collection.json';
+import environment from '../src/enviroment/Booking Playground.environment.json'
 
 const test = newman.run({
-    collection: json, 
+    collection: collection, 
+    environment: environment,
     reporters: ['htmlextra'],
     iterationCount:1,
     reporter: {
         htmlextra: {
             export: './report.html',
             logs: true,
-            showOnlyFails: true,
-            noSyntaxHighlighting: true,
-            testPaging: true,
-            browserTitle: "My Newman report",
-            title: "My Newman Report",
-            titleSize: 4,
-            omitHeaders: true,
-            skipHeaders: "Authorization",
-            hideRequestBody: ["Login"],
-            hideResponseBody: ["Auth Request"],
+            browserTitle: "Booking API Report",
+            title: "Booking Report",
             showEnvironmentData: true,
-            skipEnvironmentVars: ["API_KEY"],
             showGlobalData: true,
-            skipGlobalVars: ["API_TOKEN"],
-            skipSensitiveData: true,
-            showMarkdownLinks: true,
             showFolderDescription: true,
-            timezone: "Australia/Sydney"
+            timezone: "Asia/Ho_Chi_Minh"
         }
     }
 }, function (err) {
