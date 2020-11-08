@@ -9,7 +9,7 @@ const test = newman.run({
     iterationCount:1,
     reporter: {
         htmlextra: {
-            export: 'public/report.html',
+            export: 'public/index.html',
             logs: true,
             browserTitle: "Booking API Report",
             title: "Booking Report",
