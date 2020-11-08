@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npx ts-node src/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["newman","example"],
+  "author": "Sang Nguyen",
   "license": "ISC",
   "dependencies": {
     "newman": "^5.2.0",
