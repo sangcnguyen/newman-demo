@@ -2,7 +2,7 @@ name: Generate Newman report
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   build-and-deploy:
