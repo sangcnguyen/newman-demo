@@ -5,7 +5,7 @@ import environment from '../src/enviroment/Booking Playground.environment.json'
 const test = newman.run({
     collection: collection, 
     environment: environment,
-    reporters: ['htmlextra'],
+    reporters: ['cli','htmlextra'],
     iterationCount:1,
     reporter: {
         htmlextra: {
